@@ -1,0 +1,24 @@
+.cocktails {
+    &_container {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        gap: 20px;
+        padding: 20px;
+    }
+
+    &_img {
+        display: block;
+        width: 100%;
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    &_card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 10px;
+    }
+}

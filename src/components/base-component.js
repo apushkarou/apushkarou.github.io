@@ -12,6 +12,7 @@ export default class BaseComponent {
     this.beforeInitialize();
     this.initialize();
     this.afterInitialize();
+    this.initEvents();
   }
 
   beforeInitialize() {
@@ -23,6 +24,10 @@ export default class BaseComponent {
   }
 
   afterInitialize() {
+    /* abstract method */
+  }
+
+  initEvents() {
     /* abstract method */
   }
 
