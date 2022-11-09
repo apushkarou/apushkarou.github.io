@@ -33,15 +33,17 @@ export default class FilterComponent {
       (e) => {
         const inputValue =
           e.target.value.toLocaleLowerCase();
-        const filteredData = this.data.filter(
-          (drink) => {
-            return (
-              drink[this.filterBy]
-                .toLocaleLowerCase()
-                .indexOf(inputValue) > -1
-            );
-          }
-        );
+
+        const filteredData =
+          inputValue.length < 1
+            ? this.data
+            : this.data.filter((drink) => {
+                return (
+                  drink[this.filterBy]
+                    .toLocaleLowerCase()
+                    .indexOf(inputValue) > -1
+                );
+              });
         document.dispatchEvent(
           new CustomEvent('filter-cocktails', {
             detail: {
