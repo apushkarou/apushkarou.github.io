@@ -4,9 +4,9 @@ import FilterComponent from './components/filter';
 
 const component = new HelloComponent();
 const coctailsContainer = new CoctailsContainer();
+
 const filterComponent = new FilterComponent({
   filterBy: 'strDrink'
-  // other options...
 });
 
 const root = document.getElementById('root');
